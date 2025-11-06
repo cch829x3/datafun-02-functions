@@ -104,9 +104,9 @@ def transform_using_keyword_args_with_default_values(input="bearcat", reverse=Fa
     s = f"CALLING transform_using_keyword_args_with_default_values(input={input}, reverse={reverse})"
     logger.info(s)
 
-    result = input[:4:1]
+    result = input[:3]
     if reverse:
-            result = input[3::-1]
+        result = result[::-1]
     logger.info(f"RETURNING {result}")
     return result
 
@@ -138,4 +138,5 @@ if __name__ == "__main__":
         
     # Read log file and print it to the terminal
     with open(logname, 'r') as file_wrapper:
-        print(file_wrapper.read()
+        print(file_wrapper.read())
+        
